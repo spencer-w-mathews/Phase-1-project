@@ -55,3 +55,11 @@ acceptBtn.addEventListener("click", ()=>{
     congrats.textContent="Congrats, you have 1 new enemy!"
     address.append(congrats)
 })
+
+// submit button
+const form = document.querySelector(".message")
+form.addEventListener("submit", (e)=>{
+    form.reset()
+    e.preventDefault()
+    alert('You sent your enemy a message!')
+})
