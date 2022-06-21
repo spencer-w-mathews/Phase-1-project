@@ -7,6 +7,14 @@ fetch('https://randomuser.me/api/')
         generateNewUserBtn.addEventListener("click", ()=>{
             generateNewUser(randomUser)
             generateNewUserBtn.remove()
+            acceptBtn.addEventListener("click", ()=>{
+                acceptBtn.remove()
+                declineBtn.remove()
+                const congrats= document.createElement("p")
+                const address= document.querySelector(".address")
+                        congrats.textContent=`Congrats, ${randomUser.results[0].name.first} is your Archenemy!`
+                address.append(congrats)
+            })
         })
         
     })
@@ -47,14 +55,14 @@ declineBtn.addEventListener("mouseleave", ()=>{
 })
 
 // accept button click
-acceptBtn.addEventListener("click", ()=>{
-    acceptBtn.remove()
-    declineBtn.remove()
-    const congrats= document.createElement("p")
-    const address= document.querySelector(".address")
-    congrats.textContent="Congrats, you have 1 new enemy!"
-    address.append(congrats)
-})
+// acceptBtn.addEventListener("click", ()=>{
+//     acceptBtn.remove()
+//     declineBtn.remove()
+//     const congrats= document.createElement("p")
+//     const address= document.querySelector(".address")
+//     congrats.textContent="Congrats, you have 1 new enemy!"
+//     address.append(congrats)
+// })
 
 // submit button
 const form = document.querySelector(".message")
