@@ -1,0 +1,62 @@
+body{
+    background-color: lightgrey;
+    padding-top: 0px;
+    margin: 0px 0px 25px 0px;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    background-color: black;
+    margin: 0px;
+    font-size: 50px;
+}
+
+.generator{
+    margin-top: 10px;
+    position: absolute;
+    left: 42%;
+    font-size: 20px;
+}
+
+.enemyCard{
+    top: 20%;
+    left: 34%;
+    position: absolute;
+    padding-bottom: 25px;
+    border-style: solid;
+    background-color: black;
+    color: white;
+}
+
+.accept{
+    position: relative;
+    left: 45%;
+}
+
+.decline{
+    position: relative;
+    left: 45%;
+}
+
+.message{
+    left: 35%;
+    position: absolute;
+    top: 125%;
+    padding-bottom: 30px;
+}
+
+#message{
+    height: 200px;
+    position: relative;
+}
+
+.from{
+    position: absolute;
+    left: 28%;
+}
+
+#submit{
+    position: absolute;
+    top: 110%;
+}
