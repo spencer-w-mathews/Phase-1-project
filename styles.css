@@ -21,7 +21,7 @@ h1{
 
 .enemyCard{
     top: 20%;
-    left: 34%;
+    left: 41.5%;
     position: absolute;
     padding-bottom: 25px;
     border-style: solid;
@@ -29,20 +29,32 @@ h1{
     color: white;
 }
 
+
+.image{
+    width: 200px;
+    position: relative;
+    left: 5px;
+}
+
+.name{
+    font-size: 30px;
+    position: relative;
+}
+
 .accept{
     position: relative;
-    left: 45%;
+    left: 0%;
 }
 
 .decline{
     position: relative;
-    left: 45%;
+    left: 0%;
 }
 
 .message{
     left: 35%;
     position: absolute;
-    top: 125%;
+    top: 100%;
     padding-bottom: 30px;
 }
 
@@ -60,3 +72,4 @@ h1{
     position: absolute;
     top: 110%;
 }
+
