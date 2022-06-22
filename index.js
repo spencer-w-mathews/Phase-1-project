@@ -17,7 +17,7 @@ fetch('https://randomuser.me/api/')
                 phone.append(congrats)
 
                 const randomly = () => Math.random() - 0.5
-                const weakness = ['Weakness: Bad Knees', 'Weakness: Stepping on Legos', 'Weakness: Time Zones', 'Weakness: Looking Both Ways Down A One Way Road', 'Weakness: Having Name Spelled Backwards', 'Tree Nut Allergy', 'Poor Internet Connection', 'Does Not Take Criticism Well', 'Commitment', 'The Color Yellow', 'Shy in Large Groups', 'Cares Too Much, Sarcasm']
+                const weakness = ['Weakness: Bad Knees', 'Weakness: Stepping on Legos', 'Weakness: Time Zones', 'Weakness: Looking Both Ways Down A One Way Road', 'Weakness: Having Name Spelled Backwards', 'Tree Nut Allergy', 'Poor Internet Connection', 'Does Not Take Criticism Well', 'Commitment', 'The Color Yellow', 'Shy in Large Groups', 'Cares Too Much', 'Sarcasm']
                 const weaknessInfo = Array(1).fill({})
                 const dynamicWeakness = [].concat(weakness).sort(randomly)
                 weaknessInfo.forEach((t, i)=> {
