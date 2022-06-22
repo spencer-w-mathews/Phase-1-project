@@ -32,47 +32,59 @@ h1{
 .generator{
     margin-top: 10px;
     position: absolute;
-    left: 42%;
+    left: 42.5%;
     font-size: 20px;
 }
 
 .enemyCard{
     top: 20%;
-    left: 41.5%;
     position: absolute;
+    left: 42%;
     padding-bottom: 25px;
     border-style: solid;
     background-color: black;
     color: white;
+    width: 225px
 }
 
 
 .image{
-    width: 200px;
+    width: 180px;
     position: relative;
-    left: 10px;
-    right: 20px;
+    left: 22.5px;
+    right: 10px;
 }
 
 .name{
     font-size: 30px;
     position: relative;
+    text-align: center;
+}
+
+.age{
+    position: relative;
+    text-align: center;
+}
+
+.address{
+    position: relative;
+    text-align: center;
 }
 
 .accept{
     position: relative;
-    left: 0%;
+    left: 10px;
 }
 
 .decline{
     position: relative;
-    left: 0%;
+    left: 5px;
 }
 
 .message{
-    left: 35%;
+    left: 37%;
     position: absolute;
-    top: 100%;
+    top: 92%;
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
@@ -90,5 +102,10 @@ h1{
 #submit{
     position: absolute;
     top: 110%;
+    left: 28%;
 }
 
+.footer{
+    position:absolute;
+    top: 130%;
+}
