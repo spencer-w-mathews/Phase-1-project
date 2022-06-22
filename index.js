@@ -23,6 +23,7 @@ fetch('https://randomuser.me/api/')
                 weaknessInfo.forEach((t, i)=> {
                 console.info(dynamicWeakness[i])
                 phone.append(dynamicWeakness[i])
+                })
                 const form = document.querySelector(".message")
                 form.addEventListener("submit", (e)=>{
                     form.reset()
@@ -33,7 +34,7 @@ fetch('https://randomuser.me/api/')
         })
         
     })
-    })
+    
 
 //generate new user
 function generateNewUser(user){

@@ -32,8 +32,9 @@ h1{
 .generator{
     margin-top: 10px;
     position: absolute;
-    left: 42.5%;
+    left: 44%;
     font-size: 20px;
+    border-radius: 12px;
 }
 
 .enemyCard{
@@ -79,11 +80,13 @@ h1{
 .accept{
     position: relative;
     left: 10px;
+    border-radius: 12px;
 }
 
 .decline{
     position: relative;
     left: 5px;
+    border-radius: 12px;
 }
 
 .message{
@@ -94,20 +97,34 @@ h1{
     margin-bottom: 30px;
 }
 
+h2{
+    background-color: #000;
+    color: red;
+}
+
+label{
+    background-color: #000;
+    color: red;
+    margin: 5px 0px 20px 0px;
+}
+
 #message{
     height: 200px;
     position: relative;
 }
 
 .from{
-    position: absolute;
-    left: 28%;
+    box-sizing: border-box;
+    position: relative;
+    left: 24%;
+    margin: 10px 0px;
+    align-items: center;
 }
 
 #submit{
     position: absolute;
-    top: 110%;
-    left: 28%;
+    top: 88%;
+    left: 24%;
 }
 
 .footer{
