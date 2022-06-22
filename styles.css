@@ -71,6 +71,11 @@ h1{
     text-align: center;
 }
 
+.phone{
+    position: relative;
+    text-align: center;
+}
+
 .accept{
     position: relative;
     left: 10px;
@@ -84,7 +89,7 @@ h1{
 .message{
     left: 37%;
     position: absolute;
-    top: 92%;
+    top: 110%;
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
@@ -107,5 +112,5 @@ h1{
 
 .footer{
     position:absolute;
-    top: 130%;
+    top: 150%;
 }

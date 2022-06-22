@@ -10,10 +10,19 @@ fetch('https://randomuser.me/api/')
             acceptBtn.addEventListener("click", ()=>{
                 acceptBtn.remove()
                 declineBtn.remove()
-                const congrats= document.createElement("p")
                 const address= document.querySelector(".address")
-                        congrats.textContent=`${randomUser.results[0].name.first} is your Archenemy!`
-                address.append(congrats)
+                const congrats= document.createElement("p")
+                const phone = document.querySelector(".phone")
+                        congrats.textContent=`Congrats, ${randomUser.results[0].name.first} is your Nemesis!`
+                phone.append(congrats)
+
+                const randomly = () => Math.random() - 0.5
+                const weakness = ['Weakness: Bad Knees', 'Weakness: Stepping on Legos', 'Weakness: Time Zones', 'Weakness: Looking Both Ways Down A One Way Road', 'Weakness: Having Name Spelled Backwards']
+                const weaknessInfo = Array(1).fill({})
+                const dynamicWeakness = [].concat(weakness).sort(randomly)
+                weaknessInfo.forEach((t, i)=> {
+                console.info(dynamicWeakness[i])
+                phone.append(dynamicWeakness[i])
                 const form = document.querySelector(".message")
                 form.addEventListener("submit", (e)=>{
                     form.reset()
@@ -24,6 +33,7 @@ fetch('https://randomuser.me/api/')
         })
         
     })
+    })
 
 //generate new user
 function generateNewUser(user){
@@ -31,10 +41,12 @@ function generateNewUser(user){
     const enemyAge = document.querySelector(".age")
     const enemyImage= document.querySelector(".image")
     const enemyLoc= document.querySelector(".address")
+    const enemyPhone= document.querySelector(".phone")
     enemyName.textContent = user.results[0].name.first
     enemyImage.src=user.results[0].picture.large
     enemyAge.textContent= `Age: ${user.results[0].dob.age}`
     enemyLoc.textContent= `Location: ${user.results[0].location.state}`
+    enemyPhone.textContent= `Phone: ${user.results[0].cell}`
 }
 
 
