@@ -36,12 +36,6 @@ const enemyPhone= document.querySelector(".phone")
 const weak = document.createElement('p')
 //generate new user
 function generateNewUser(user){
-    // const enemyName = document.querySelector(".name")
-    // const enemyAge = document.querySelector(".age")
-    // const enemyImage= document.querySelector(".image")
-    // const enemyLoc= document.querySelector(".address")
-    // const enemyPhone= document.querySelector(".phone")
-    // const weak = document.createElement('p')
     enemyName.textContent = user.results[0].name.first
     enemyImage.src=user.results[0].picture.large
     enemyAge.textContent= `Age: ${user.results[0].dob.age}`
@@ -59,22 +53,23 @@ function generateNewUser(user){
     enemyPhone.append(weak)
     })
     acceptBtn.addEventListener("click", ()=>{
-    const newNemesis = {
-        name: user.results[0].name.first,
-        image: enemyImage.src,
-        age: user.results[0].dob.age,
-        location: user.results[0].location.state,
-        phone: user.results[0].cell,
-        weakness: weak.textContent
-    }
-    fetch('http://localhost:3000/enemies',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newNemesis)
-    })
-    console.log(newNemesis)
+        const newNemesis = {
+            name: user.results[0].name.first,
+            image: enemyImage.src,
+            age: user.results[0].dob.age,
+            location: user.results[0].location.state,
+            phone: user.results[0].cell,
+            weakness: weak.textContent
+        }
+    //posting enemies to json server upon accept button click
+        fetch('http://localhost:3000/enemies',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newNemesis)
+        })
+        console.log(newNemesis)
     })
 }
 
@@ -112,6 +107,7 @@ fetch('http://localhost:3000/enemies')
     .then(enemies=>{
         enemies.forEach(enemy=>{
             const xBtn= document.createElement('input')
+            xBtn.setAttribute("class", "xBtn")
             xBtn.setAttribute('type','button')
             xBtn.setAttribute('value', 'x')
             const nameForList= document.createElement('li')
@@ -122,6 +118,7 @@ fetch('http://localhost:3000/enemies')
             console.log(enemy)
             xBtn.addEventListener("click", ()=>{
                 nameForList.remove()
+                window.location.reload(true)
                 fetch(`http://localhost:3000/enemies/${enemy.id}`,{
                 method: 'DELETE',
                 headers: {
@@ -142,21 +139,14 @@ fetch('http://localhost:3000/enemies')
                 acceptBtn.remove()
                 declineBtn.remove()
                 generateNewUserBtn.remove()
-                // const form = document.querySelector(".message")
-                // form.addEventListener("submit", (e)=>{
-                //     form.reset()
-                //     e.preventDefault()
-                //     alert('You sent your enemy a message!')})
-                
-                
-
             })
         })
     })
 
-    const form = document.querySelector(".message")
-    form.addEventListener("submit", (e)=>{
-        form.reset()
-        e.preventDefault()
-        alert(`You sent ${enemyName.textContent} a message!`)
-    })
+//submit form alert and prevent refresh
+const form = document.querySelector(".message")
+form.addEventListener("submit", (e)=>{
+    form.reset()
+    e.preventDefault()
+    alert(`You sent ${enemyName.textContent} a message!`)
+})
