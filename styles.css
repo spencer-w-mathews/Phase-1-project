@@ -130,3 +130,25 @@ label{
     position:absolute;
     top: 150%;
 }
+
+h4{
+    font-size: 40px;
+    position: absolute;
+    top: 8%;
+}
+
+ul{
+    font-size: 25px;
+    position: absolute;
+    top: 24%;
+}
+
+.moreDetails{
+    position: absolute;
+    top: 22%;
+    left: 2%;
+}
+
+h5{
+    font-size: 15px;
+}
