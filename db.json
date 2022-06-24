@@ -1,3 +1,40 @@
 {
-  "enemies": []
+  "enemies": [
+    {
+      "name": "Gökhan",
+      "image": "https://randomuser.me/api/portraits/men/34.jpg",
+      "age": 51,
+      "location": "Rize",
+      "phone": "(329)-846-2554",
+      "weakness": "Weakness: The Color Yellow",
+      "id": 1
+    },
+    {
+      "name": "Elsa",
+      "image": "https://randomuser.me/api/portraits/women/90.jpg",
+      "age": 53,
+      "location": "Haute-Garonne",
+      "phone": "06-71-02-67-83",
+      "weakness": "Weakness: Shy in Large Groups",
+      "id": 2
+    },
+    {
+      "name": "Lily",
+      "image": "https://randomuser.me/api/portraits/women/85.jpg",
+      "age": 32,
+      "location": "Western Australia",
+      "phone": "0477-838-828",
+      "weakness": "Weakness: Tree Nut Allergy",
+      "id": 3
+    },
+    {
+      "name": "Zoe",
+      "image": "https://randomuser.me/api/portraits/women/35.jpg",
+      "age": 29,
+      "location": "West Coast",
+      "phone": "(879)-509-4855",
+      "weakness": "Weakness: Sarcasm",
+      "id": 4
+    }
+  ]
 }
